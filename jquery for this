@@ -1,0 +1,8 @@
+jQuery(document).ready(function() {
+      var iframeId = jQuery('iframe').prevObject;
+      var url = iframeId[0].location.href;
+      var jobid = url.split('?id=')[1];  
+      // var iframe = jQuery('iframe').prevObject[0].documentElement;
+       var iframe = jQuery('iframe').prevObject[0];
+      jQuery(iframe.body).find('#edit-job-id').attr('value',jobid);
+)};
